@@ -1,3 +1,20 @@
-FROM 	cypress/included:3.2.0
+FROM node:14-bullseye
+RUN : \
+  && apt-get update \
+  && apt-get install -y \
+    libasound2 \
+    libgbm-dev \
+    libgconf-2-4 \
+    libgtk-3-0 \
+    libgtk2.0-0 \
+    libnotify-dev \
+    libnss3 \
+    libxss1 \
+    libxtst6 \
+    xauth \
+    xvfb
 
-COPY . /
+COPY package.json package-lock.json ./
+RUN npm ci
+COPY . .
+CMD npm test
