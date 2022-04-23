@@ -1,0 +1,23 @@
+{
+  "name": "acceptance-test",
+  "version": "1.0.0",
+  "description": "An acceptance test suite in the form of a Kubernetes cronjob.",
+  "main": "run cy:run",
+  "scripts": {
+    "cy:run": "cypress run",
+    "test": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iskprinter/acceptance-test.git"
+  },
+  "author": "Cameron Hudson",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/iskprinter/acceptance-test/issues"
+  },
+  "homepage": "https://github.com/iskprinter/acceptance-test#readme",
+  "dependencies": {
+    "cypress": "^9.5.4"
+  }
+}
