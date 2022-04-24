@@ -17,4 +17,4 @@ RUN : \
 COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
-CMD npm test
+CMD node_modules/.bin/cypress run --record=false
