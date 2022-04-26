@@ -17,4 +17,4 @@ RUN : \
 COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
-CMD node_modules/.bin/cypress run --config videoRecording=false
+CMD ["node_modules/.bin/cypress", "run", "--config", "videoRecording=false"]
