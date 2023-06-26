@@ -1,4 +1,4 @@
-FROM node:14-bullseye
+FROM node:20-bookworm
 RUN : \
   && apt-get update \
   && apt-get install -y \
@@ -17,4 +17,4 @@ RUN : \
 COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
-CMD ["node_modules/.bin/cypress", "run", "--config", "videoRecording=false"]
+CMD ["node_modules/.bin/cypress", "run", "--config", "video=false"]
